@@ -247,6 +247,32 @@
           </attList>
         </classSpec>
 
+        <elementSpec ident="rubric" module="MEI.neumes" mode="add">
+          <desc>Non-sung text found in liturgic manuscripts that gives information about the conduct
+            of the liturgy. Rubrics are typically (but not always) highlighted using red ink.
+          </desc>
+          <classes>
+            <memberOf key="att.common"/>
+            <memberOf key="att.facsimile"/>
+            <memberOf key="model.eventLike.neumes"/>
+          </classes>
+          <content>
+            <rng:zeroOrMore>
+              <rng:choice>
+                <rng:text/>
+                <rng:ref name="model.nameLike.agent"/>
+                <rng:ref name="model.stageDirLike"/>
+                <rng:ref name="model.lbLike"/>
+                <rng:ref name="model.pbLike"/>
+                <rng:ref name="model.rendLike"/>
+                <rng:ref name="model.appLike"/>
+                <rng:ref name="model.editLike"/>
+                <rng:ref name="model.transcriptionLike"/>
+              </rng:choice>
+            </rng:zeroOrMore>
+          </content>
+        </elementSpec>
+
       </schemaSpec>
     </body>
   </text>
